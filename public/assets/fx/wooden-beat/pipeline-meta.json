@@ -1,0 +1,283 @@
+{
+  "target": "asset",
+  "mode": "sheet",
+  "prompt": "Boss wooden beat 1x8 projectile loop",
+  "role": "",
+  "input": "/Users/theomoura/.codex/generated_images/019e228f-d6a9-7bf2-8d54-77731aca4ed2/ig_0fbf31bf007f4000016a04c40928cc8199b5f5be6c998071af.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 75,
+  "rows": 1,
+  "cols": 8,
+  "cell_size": 96,
+  "fit_scale": 0.9,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 2,
+  "frame_labels": [
+    "projectile-1",
+    "projectile-2",
+    "projectile-3",
+    "projectile-4",
+    "projectile-5",
+    "projectile-6",
+    "projectile-7",
+    "projectile-8"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        271,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        38,
+        250,
+        246,
+        463
+      ],
+      "edge_touch": false,
+      "output_size": [
+        84,
+        86
+      ],
+      "paste_position": [
+        6,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        271,
+        0,
+        542,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        37,
+        255,
+        240,
+        463
+      ],
+      "edge_touch": false,
+      "output_size": [
+        82,
+        84
+      ],
+      "paste_position": [
+        7,
+        6
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        542,
+        0,
+        813,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        34,
+        258,
+        230,
+        461
+      ],
+      "edge_touch": false,
+      "output_size": [
+        79,
+        82
+      ],
+      "paste_position": [
+        8,
+        7
+      ]
+    },
+    {
+      "grid": [
+        0,
+        3
+      ],
+      "source_box": [
+        813,
+        0,
+        1084,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        31,
+        256,
+        236,
+        461
+      ],
+      "edge_touch": false,
+      "output_size": [
+        83,
+        83
+      ],
+      "paste_position": [
+        6,
+        6
+      ]
+    },
+    {
+      "grid": [
+        0,
+        4
+      ],
+      "source_box": [
+        1084,
+        0,
+        1355,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        25,
+        255,
+        231,
+        458
+      ],
+      "edge_touch": false,
+      "output_size": [
+        83,
+        82
+      ],
+      "paste_position": [
+        6,
+        7
+      ]
+    },
+    {
+      "grid": [
+        0,
+        5
+      ],
+      "source_box": [
+        1355,
+        0,
+        1626,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        28,
+        256,
+        227,
+        465
+      ],
+      "edge_touch": false,
+      "output_size": [
+        80,
+        84
+      ],
+      "paste_position": [
+        8,
+        6
+      ]
+    },
+    {
+      "grid": [
+        0,
+        6
+      ],
+      "source_box": [
+        1626,
+        0,
+        1897,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        20,
+        258,
+        227,
+        463
+      ],
+      "edge_touch": false,
+      "output_size": [
+        83,
+        83
+      ],
+      "paste_position": [
+        6,
+        6
+      ]
+    },
+    {
+      "grid": [
+        0,
+        7
+      ],
+      "source_box": [
+        1897,
+        0,
+        2168,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 1,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        20,
+        255,
+        229,
+        464
+      ],
+      "edge_touch": false,
+      "output_size": [
+        84,
+        84
+      ],
+      "paste_position": [
+        6,
+        6
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

@@ -1,0 +1,163 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #07070a;
+  color: #f5efe3;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+.game-shell {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(80, 34, 22, 0.18), transparent 38%),
+    linear-gradient(180deg, rgba(16, 14, 16, 0.96), rgba(4, 4, 7, 1)),
+    #07070a;
+  display: grid;
+  grid-template-rows: 42px minmax(0, 1fr);
+}
+
+.game-toolbar {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(255, 222, 164, 0.18);
+  background: rgba(8, 8, 11, 0.96);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+.game-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #ffe0a0;
+  white-space: nowrap;
+}
+
+.net-panel {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #d8d1c2;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.net-panel span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.icon-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 224, 166, 0.24);
+  border-radius: 6px;
+  color: #ffe0a0;
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background: rgba(255, 190, 70, 0.16);
+}
+
+.icon-button:active {
+  transform: translateY(1px);
+}
+
+.game-frame {
+  min-height: 0;
+  position: relative;
+  background: #050507;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: auto;
+  background: #050507;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.load-panel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 178, 78, 0.14), transparent 36%),
+    rgba(5, 5, 8, 0.9);
+  color: #ffe0a0;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.86);
+}
+
+.load-panel.error {
+  color: #ff8b7f;
+  padding: 24px;
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .game-shell {
+    grid-template-rows: 58px minmax(0, 1fr);
+  }
+
+  .game-toolbar {
+    height: 58px;
+    align-items: stretch;
+    padding: 6px 8px;
+  }
+
+  .net-panel {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 6px 9px;
+    white-space: normal;
+  }
+}

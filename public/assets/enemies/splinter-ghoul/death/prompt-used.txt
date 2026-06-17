@@ -1,0 +1,1 @@
+splinter-ghoul death 8-direction Doom-style billboard sheet

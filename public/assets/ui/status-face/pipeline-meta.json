@@ -1,0 +1,31 @@
+{
+  "source": "/Users/theomoura/.codex/generated_images/019e7a7e-f865-78d1-b686-8201838de471/ig_02ef44791eb320e5016a1b705f23d88191bdfc2a6853b885aa.png",
+  "reference": "/tmp/codex-remote-attachments/019e7a7e-f865-78d1-b686-8201838de471/DA71F6F4-AD41-4F77-AE96-11931F801C88/1-Pasted-Image-1.jpg",
+  "frames": [
+    "face-1.png",
+    "face-2.png",
+    "face-3.png",
+    "face-4.png",
+    "face-5.png",
+    "face-6.png"
+  ],
+  "layout": {
+    "columns": 3,
+    "rows": 2,
+    "frameSize": 128
+  },
+  "expressions": [
+    "normal",
+    "angry-shooting",
+    "hurt",
+    "scared",
+    "dead",
+    "victory"
+  ],
+  "postprocess": {
+    "chromaKey": "border auto",
+    "softMatte": true,
+    "despill": true,
+    "edgeContract": 1
+  }
+}

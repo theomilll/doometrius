@@ -1,0 +1,283 @@
+{
+  "target": "asset",
+  "mode": "sheet",
+  "prompt": "Enemy green bolt 1x8 projectile loop",
+  "role": "",
+  "input": "/Users/theomoura/.codex/generated_images/019e228f-d6a9-7bf2-8d54-77731aca4ed2/ig_0fbf31bf007f4000016a04c3dbbe048199b100deed6b6663c7.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 70,
+  "rows": 1,
+  "cols": 8,
+  "cell_size": 96,
+  "fit_scale": 0.9,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 2,
+  "frame_labels": [
+    "projectile-1",
+    "projectile-2",
+    "projectile-3",
+    "projectile-4",
+    "projectile-5",
+    "projectile-6",
+    "projectile-7",
+    "projectile-8"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        271,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 4,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        62,
+        253,
+        257,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        78,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        271,
+        0,
+        542,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 4,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        54,
+        253,
+        248,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        77,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        542,
+        0,
+        813,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 4,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        49,
+        253,
+        240,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        76,
+        86
+      ],
+      "paste_position": [
+        10,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        3
+      ],
+      "source_box": [
+        813,
+        0,
+        1084,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 3,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        36,
+        253,
+        230,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        77,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        4
+      ],
+      "source_box": [
+        1084,
+        0,
+        1355,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 4,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        29,
+        253,
+        223,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        77,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        5
+      ],
+      "source_box": [
+        1355,
+        0,
+        1626,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 2,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        23,
+        253,
+        216,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        77,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        6
+      ],
+      "source_box": [
+        1626,
+        0,
+        1897,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 3,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        16,
+        253,
+        212,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        78,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    },
+    {
+      "grid": [
+        0,
+        7
+      ],
+      "source_box": [
+        1897,
+        0,
+        2168,
+        724
+      ],
+      "component_mode": "all",
+      "component_count": 5,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        11,
+        253,
+        206,
+        469
+      ],
+      "edge_touch": false,
+      "output_size": [
+        78,
+        86
+      ],
+      "paste_position": [
+        9,
+        5
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

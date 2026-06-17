@@ -1,0 +1,37 @@
+{
+  "source": "/Users/theomoura/.codex/generated_images/019e7a7e-f865-78d1-b686-8201838de471/ig_06661910c082a06e016a1b85e5286c81919e4c3d741acc2fe8.png",
+  "frames": [
+    "direction-1.png",
+    "direction-2.png",
+    "direction-3.png",
+    "direction-4.png",
+    "direction-5.png",
+    "direction-6.png",
+    "direction-7.png",
+    "direction-8.png"
+  ],
+  "layout": {
+    "columns": 4,
+    "rows": 2,
+    "frameWidth": 96,
+    "frameHeight": 128
+  },
+  "directions": [
+    "front",
+    "front-right",
+    "right",
+    "back-right",
+    "back",
+    "back-left",
+    "left",
+    "front-left"
+  ],
+  "postprocess": {
+    "chromaKey": "border auto",
+    "softMatte": true,
+    "despill": true,
+    "edgeContract": 1,
+    "sharedScale": true,
+    "anchor": "bottom-center"
+  }
+}

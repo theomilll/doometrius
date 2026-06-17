@@ -1,0 +1,1 @@
+8-direction full-body player marine sprite based on the provided face reference. Order: front, front-right, right, back-right, back, back-left, left, front-left. Flat #FF00FF chroma-key background; same identity, olive armor, same scale, no labels.

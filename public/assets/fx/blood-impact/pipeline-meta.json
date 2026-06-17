@@ -1,0 +1,283 @@
+{
+  "target": "asset",
+  "mode": "sheet",
+  "prompt": "Blood hit impact 2x4 sheet rectified",
+  "role": "",
+  "input": "/Users/theomoura/Documents/coding/university/frontendgame/public/assets/fx/blood-impact/source-rectified.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 70,
+  "rows": 2,
+  "cols": 4,
+  "cell_size": 128,
+  "fit_scale": 0.93,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": true,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 2,
+  "frame_labels": [
+    "impact-1",
+    "impact-2",
+    "impact-3",
+    "impact-4",
+    "impact-5",
+    "impact-6",
+    "impact-7",
+    "impact-8"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        220,
+        220
+      ],
+      "component_mode": "all",
+      "component_count": 10,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        62,
+        71,
+        150,
+        142
+      ],
+      "edge_touch": false,
+      "output_size": [
+        57,
+        46
+      ],
+      "paste_position": [
+        35,
+        41
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        220,
+        0,
+        440,
+        220
+      ],
+      "component_mode": "all",
+      "component_count": 33,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        19,
+        30,
+        193,
+        181
+      ],
+      "edge_touch": false,
+      "output_size": [
+        113,
+        98
+      ],
+      "paste_position": [
+        7,
+        15
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        440,
+        0,
+        660,
+        220
+      ],
+      "component_mode": "all",
+      "component_count": 81,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        14,
+        19,
+        196,
+        192
+      ],
+      "edge_touch": false,
+      "output_size": [
+        119,
+        113
+      ],
+      "paste_position": [
+        4,
+        7
+      ]
+    },
+    {
+      "grid": [
+        0,
+        3
+      ],
+      "source_box": [
+        660,
+        0,
+        880,
+        220
+      ],
+      "component_mode": "all",
+      "component_count": 72,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        15,
+        18,
+        196,
+        193
+      ],
+      "edge_touch": false,
+      "output_size": [
+        118,
+        114
+      ],
+      "paste_position": [
+        5,
+        7
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        220,
+        220,
+        440
+      ],
+      "component_mode": "all",
+      "component_count": 29,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        16,
+        23,
+        197,
+        190
+      ],
+      "edge_touch": false,
+      "output_size": [
+        118,
+        109
+      ],
+      "paste_position": [
+        5,
+        9
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        220,
+        220,
+        440,
+        440
+      ],
+      "component_mode": "all",
+      "component_count": 37,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        18,
+        22,
+        193,
+        189
+      ],
+      "edge_touch": false,
+      "output_size": [
+        114,
+        109
+      ],
+      "paste_position": [
+        7,
+        9
+      ]
+    },
+    {
+      "grid": [
+        1,
+        2
+      ],
+      "source_box": [
+        440,
+        220,
+        660,
+        440
+      ],
+      "component_mode": "all",
+      "component_count": 29,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        26,
+        24,
+        185,
+        188
+      ],
+      "edge_touch": false,
+      "output_size": [
+        103,
+        107
+      ],
+      "paste_position": [
+        12,
+        10
+      ]
+    },
+    {
+      "grid": [
+        1,
+        3
+      ],
+      "source_box": [
+        660,
+        220,
+        880,
+        440
+      ],
+      "component_mode": "all",
+      "component_count": 4,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        77,
+        71,
+        135,
+        141
+      ],
+      "edge_touch": false,
+      "output_size": [
+        37,
+        45
+      ],
+      "paste_position": [
+        45,
+        41
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

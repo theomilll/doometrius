@@ -1,0 +1,145 @@
+import type { BossState, Mission } from '../core/types';
+
+const grid = [
+  '############################',
+  '#...rr.......##......ss....#',
+  '#..rrrr......##.....ssss...#',
+  '#...rr.......##....##ss##..#',
+  '#........rr......s.##..##..#',
+  '#.....r......##.....s......#',
+  '####....############....####',
+  '#..ss.......#..#....rr.....#',
+  '#..s........#..#.....r.....#',
+  '#..####..rr.#..#.ss..####..#',
+  '#......rr...#..#...ss......#',
+  '#....rr.....#..#.....ss....#',
+  '######..#####..#####..######',
+  '#....rr......HH......ss....#',
+  '#...rrrr.....HH.....ssss...#',
+  '#..####..rr........ss####..#',
+  '#..####..............####..#',
+  '#......ss..########..rr....#',
+  '########...#......#...######',
+  '#.....rr...#..ss..#........#',
+  '#...rr.....#..ss..#...ss...#',
+  '#....##....#..ss..#....##..#',
+  '#....##......rr....B...##E.#',
+  '############################',
+] as const;
+
+const tileLegend: Mission['tileLegend'] = {
+  '#': { solid: true, texture: 'bone' },
+  '.': { solid: false, texture: 'floor' },
+  'r': { solid: false, texture: 'rust', height: 0.16 },
+  's': { solid: false, texture: 'floor', height: 0.34 },
+  'H': { solid: false, texture: 'meat', hazard: 8 },
+  'B': { solid: false, texture: 'boss' },
+  'E': { solid: false, texture: 'boss' },
+};
+
+function createBoss(): BossState {
+  return {
+    id: 'sahurwood-boss',
+    pos: { x: 20.5, y: 20.5 },
+    radius: 0.54,
+    health: 820,
+    maxHealth: 820,
+    phase: 1,
+    active: false,
+    defeated: false,
+    facingAngle: 0,
+    cooldown: 2,
+    beatTimer: 0,
+    strideTimer: 0,
+    summonTimer: 8,
+    painTimer: 0,
+  };
+}
+
+export function getRuntimeMission(): Mission {
+  return {
+    name: 'Blacksite Breach',
+    width: grid[0].length,
+    height: grid.length,
+    grid: [...grid],
+    tileLegend,
+    playerSpawns: {
+      p1: { pos: { x: 2.6, y: 2.6 }, angle: 0 },
+      p2: { pos: { x: 2.6, y: 3.35 }, angle: 0 },
+    },
+    pickups: [
+      { id: 'pickup.ammo.start', kind: 'ammo', pos: { x: 5.5, y: 5.2 }, radius: 0.36, amount: 40, taken: false },
+      { id: 'pickup.shells.start', kind: 'shells', pos: { x: 9.5, y: 5.2 }, radius: 0.36, amount: 18, taken: false },
+      { id: 'pickup.medkit.crossfire', kind: 'medkit', pos: { x: 6.5, y: 8.5 }, radius: 0.36, amount: 35, taken: false },
+      { id: 'pickup.armor.crossfire', kind: 'armor', pos: { x: 21.5, y: 8.5 }, radius: 0.38, amount: 42, taken: false },
+      { id: 'pickup.shells.hazard', kind: 'shells', pos: { x: 8.5, y: 15.5 }, radius: 0.36, amount: 20, taken: false },
+      { id: 'pickup.ammo.hazard', kind: 'ammo', pos: { x: 19.5, y: 15.5 }, radius: 0.36, amount: 55, taken: false },
+      { id: 'pickup.medkit.boss-left', kind: 'medkit', pos: { x: 16.5, y: 20.5 }, radius: 0.36, amount: 45, taken: false },
+      { id: 'pickup.armor.boss-right', kind: 'armor', pos: { x: 24.5, y: 20.5 }, radius: 0.38, amount: 45, taken: false },
+      { id: 'pickup.shells.boss', kind: 'shells', pos: { x: 20.5, y: 22.4 }, radius: 0.36, amount: 26, taken: false },
+    ],
+    props: [
+      { id: 'prop.start.left-barrel', kind: 'barrel', pos: { x: 5.5, y: 3.5 }, radius: 0.32, blocking: true, health: 42 },
+      { id: 'prop.start.right-barrel', kind: 'barrel', pos: { x: 22.5, y: 3.5 }, radius: 0.32, blocking: true, health: 42 },
+      { id: 'prop.start.low-bones-a', kind: 'bones', pos: { x: 7.5, y: 4.5 }, radius: 0.42, blocking: true, height: 0.2 },
+      { id: 'prop.start.low-bones-b', kind: 'bones', pos: { x: 18.5, y: 4.5 }, radius: 0.42, blocking: true, height: 0.2 },
+      { id: 'prop.cross.pillar-a', kind: 'pillar', pos: { x: 7.5, y: 9.5 }, radius: 0.38, blocking: true },
+      { id: 'prop.cross.pillar-b', kind: 'pillar', pos: { x: 20.5, y: 9.5 }, radius: 0.38, blocking: true },
+      { id: 'prop.cross.barrel-left', kind: 'barrel', pos: { x: 11.5, y: 10.5 }, radius: 0.28, blocking: true, health: 38 },
+      { id: 'prop.cross.barrel-right', kind: 'barrel', pos: { x: 16.5, y: 10.5 }, radius: 0.28, blocking: true, health: 38 },
+      { id: 'prop.hazard.torch-a', kind: 'torch', pos: { x: 12.5, y: 13.5 }, radius: 0.22, blocking: false },
+      { id: 'prop.hazard.torch-b', kind: 'torch', pos: { x: 15.5, y: 13.5 }, radius: 0.22, blocking: false },
+      { id: 'prop.hazard.low-bones-left', kind: 'bones', pos: { x: 9.5, y: 14.5 }, radius: 0.4, blocking: true, height: 0.18 },
+      { id: 'prop.hazard.low-bones-right', kind: 'bones', pos: { x: 18.5, y: 14.5 }, radius: 0.4, blocking: true, height: 0.18 },
+      { id: 'prop.boss.pillar-west', kind: 'pillar', pos: { x: 17.5, y: 21.5 }, radius: 0.42, blocking: true },
+      { id: 'prop.boss.pillar-east', kind: 'pillar', pos: { x: 23.5, y: 21.5 }, radius: 0.42, blocking: true },
+      { id: 'prop.boss.bones', kind: 'bones', pos: { x: 20.5, y: 19.5 }, radius: 0.25, blocking: false },
+      { id: 'prop.boss.torch-west', kind: 'torch', pos: { x: 15.5, y: 20.5 }, radius: 0.22, blocking: false },
+      { id: 'prop.boss.torch-east', kind: 'torch', pos: { x: 25.5, y: 20.5 }, radius: 0.22, blocking: false },
+    ],
+    encounters: [
+      {
+        id: 'initial-entry',
+        label: 'Insertion contact',
+        zone: { x: 1, y: 1, w: 6, h: 6 },
+        spawns: [
+          { kind: 'splinterGhoul', pos: { x: 11.5, y: 3.2 } },
+          { kind: 'drumImp', pos: { x: 11.5, y: 5.5 } },
+        ],
+        objective: 'Contact! Cut down the welcoming party and push deeper together.',
+      },
+      {
+        id: 'crossfire-hall',
+        label: 'Crossfire hall',
+        zone: { x: 5, y: 7, w: 18, h: 5 },
+        spawns: [
+          { kind: 'rustAcolyte', pos: { x: 6.5, y: 10.5 } },
+          { kind: 'rustAcolyte', pos: { x: 21.5, y: 10.5 } },
+          { kind: 'drumImp', pos: { x: 14.5, y: 8.5 } },
+        ],
+        objective: 'Use the slabs and bone barricades for cover to clear the crossfire hall.',
+      },
+      {
+        id: 'hazard-run',
+        label: 'Hazard trench',
+        zone: { x: 5, y: 13, w: 18, h: 4 },
+        spawns: [
+          { kind: 'splinterGhoul', pos: { x: 6.5, y: 15.5 } },
+          { kind: 'splinterGhoul', pos: { x: 21.5, y: 15.5 } },
+          { kind: 'rustAcolyte', pos: { x: 14.5, y: 16.5 } },
+        ],
+        objective: 'Skirt the blood trench, collect shells, then move south to the drum gate.',
+      },
+      {
+        id: 'trigger.boss-entry',
+        label: 'Sahurwood lockdown',
+        zone: { x: 14, y: 19, w: 12, h: 4 },
+        spawns: [],
+        objective: 'Boss arena locked. Break the Sahurwood rhythm, then reach extraction.',
+      },
+    ],
+    boss: createBoss(),
+    bossArena: { x: 14, y: 19, w: 12, h: 4 },
+    exitZone: { x: 25, y: 22, w: 2, h: 1 },
+  };
+}
